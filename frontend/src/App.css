@@ -5,6 +5,12 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling */
+}
+
 body {
   background: var(--color-bg);
 }
@@ -22,6 +28,10 @@ li {
 
 .debug {
   border: 1px solid red;
+}
+
+.fullHeightDiv {
+  height: 100vh;
 }
 
 .section__padding {

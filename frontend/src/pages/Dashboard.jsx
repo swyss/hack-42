@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import {
   Command,
   CommandEmpty,
@@ -25,6 +26,31 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Coach from "./Coach";
+import Patrners from "./Partners";
+
+const menu = [
+  {
+    label: "Home",
+    link: "/home",
+  },
+  {
+    label: "Startup application",
+    link: "/application",
+  },
+  {
+    label: "Startup requests",
+    link: "/request",
+  },
+  {
+    label: "Coach/ Mentor",
+    link: "/coach",
+  },
+  {
+    label: "Parnters",
+    link: "/parners",
+  },
+];
 
 const frameworks = [
   {
@@ -49,25 +75,48 @@ const frameworks = [
   },
 ];
 
+const StartupOwerview = () => {
+  return (
+    <div className="w-4/5 p-4">
+      <div className="grid grid-cols-5 gap-4">
+        {frameworks.map((item, index) => (
+          <div className="cursor-pointer">
+            <Card className="h-40">{item.label}</Card>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const views = [<StartupOwerview />, <Coach />, <Patrners />];
+
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [viewIndex, setViewIndex] = useState(0);
+
+  useEffect(() => {
+    console.log("load startup application");
+    console.log("load startup request");
+  });
 
   return (
-    <div className="section__padding">
+    <div className="section__padding fullHeightDiv">
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
       </div>
-      <div className="mt-24">
-        <div>
+      <div className="mt-8 h-full w-full">
+        <div className="w-1/6">
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
-                className="w-[200px] justify-between"
+                className="justify-between"
               >
                 {value
                   ? frameworks.find((framework) => framework.value === value)
@@ -82,7 +131,7 @@ const Dashboard = () => {
                 <CommandEmpty>No batch found.</CommandEmpty>
                 <CommandGroup>
                   <CommandList>
-                    {frameworks.map((framework) => (
+                    {frameworks.map((framework, index) => (
                       <CommandItem
                         key={framework.value}
                         value={framework.value}
@@ -108,32 +157,35 @@ const Dashboard = () => {
             </PopoverContent>
           </Popover>
         </div>
-        <div className="w-full flex mt-4">
-          <div className="w-[200px] debug mr-4">
-            <li>
-              {frameworks.map((item, index) => (
-                <ul key={index} className="mb-1">
+        <div className="w-full flex  h-[90%] mt-4">
+          <div className="w-1/6 border rounded-lg mr-4 p-2">
+            <ul>
+              {" "}
+              {/* This ul tag should wrap all list items */}
+              {menu.map((item, index) => (
+                <li key={index} className="mb-1">
+                  {" "}
+                  {/* Each item is an li, not ul */}
                   <Button
                     variant="ghost"
                     className={`w-full justify-start ${
-                      index === activeIndex ? "bg-accent text-accent-foreground" : ""
+                      index === activeIndex
+                        ? "bg-accent text-accent-foreground"
+                        : ""
                     }`}
-                    onClick={() => setActiveIndex(index)}
+                    onClick={() => {
+                      setActiveIndex(index);
+                      setViewIndex(index);
+                    }}
                   >
                     {item.label}
                   </Button>
-                </ul>
+                </li>
               ))}
-            </li>
+            </ul>
           </div>
-          <div className="w-4/5 debug p-4">
-            <div className="grid grid-cols-5 gap-4">
-              {frameworks.map((item, index) => (
-                <div className="cursor-pointer">
-                  <Card className="h-40">{item.label}</Card>
-                </div>
-              ))}
-            </div>
+          <div className="w-full border rounded-lg p-4 relative">
+            {views[viewIndex]}
           </div>
         </div>
       </div>
