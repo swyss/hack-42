@@ -37,7 +37,10 @@ public class FellowController(IFellowService fellowService) : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateFellow(int id, Fellow fellow)
     {
-        if (id != fellow.FellowId) return BadRequest();
+        if (id != fellow.FellowId)
+        {
+            return BadRequest();
+        }
 
         await fellowService.UpdateFellowAsync(fellow);
         return NoContent();

@@ -12,31 +12,6 @@ public class PartnerService : IPartnerService
         _context = context;
     }
 
-    public IEnumerable<Partner> GetAllPartners()
-    {
-        throw new NotImplementedException();
-    }
-
-    public Partner GetPartnerById(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void CreatePartner(Partner partner)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void UpdatePartner(Partner partner)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void DeletePartner(int id)
-    {
-        throw new NotImplementedException();
-    }
-
     public async Task<IEnumerable<Partner>> GetAllPartnersAsync()
     {
         return await _context.Partners.ToListAsync();
@@ -67,5 +42,30 @@ public class PartnerService : IPartnerService
             _context.Partners.Remove(partner);
             await _context.SaveChangesAsync();
         }
+    }
+
+    public IEnumerable<Partner> GetAllPartners()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Partner GetPartnerById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void CreatePartner(Partner partner)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void UpdatePartner(Partner partner)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void DeletePartner(int id)
+    {
+        throw new NotImplementedException();
     }
 }

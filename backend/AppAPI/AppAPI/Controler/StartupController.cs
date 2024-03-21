@@ -40,17 +40,23 @@ public class StartupController(IStartupRegistrationService registrationService, 
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateStartup(int id, Startup startup)
     {
-        if (id != startup.StartupId) return BadRequest();
+        if (id != startup.StartupId)
+        {
+            return BadRequest();
+        }
 
         await startupService.UpdateStartupAsync(startup);
         return NoContent();
     }
-
+    
     // POST: api/Register
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] StartupRegistration registration)
     {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
 
         try
         {

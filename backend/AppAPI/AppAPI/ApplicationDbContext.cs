@@ -1,21 +1,20 @@
 using AppAPI.Model;
-using Microsoft.EntityFrameworkCore;
 
 namespace AppAPI;
 
-public class ApplicationDbContext(
-    DbContextOptions<ApplicationDbContext> options,
-    DbSet<Partner> partners,
-    DbSet<Fellow> fellows,
-    DbSet<Startup> startups,
-    DbSet<StartupApplication> startupApplications)
-    : DbContext(options)
-{
-    public DbSet<Partner> Partners { get; set; } = partners;
-    public DbSet<Fellow> Fellows { get; set; } = fellows;
-    public DbSet<Startup> Startups { get; set; } = startups;
-    public DbSet<StartupApplication> StartupApplications { get; set; } = startupApplications;
+using Microsoft.EntityFrameworkCore;
 
+public class ApplicationDbContext : DbContext
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+    }
+
+    public DbSet<Partner> Partners { get; set; }
+    public DbSet<Fellow> Fellows { get; set; }
+    public DbSet<Startup> Startups { get; set; }
+    public DbSet<StartupApplication> StartupApplications { get; set; }  
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

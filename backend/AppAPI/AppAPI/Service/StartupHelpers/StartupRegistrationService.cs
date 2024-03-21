@@ -17,7 +17,7 @@ public class StartupRegistrationService : IStartupRegistrationService
         // Transformieren Sie das Registration-Model in ein Startup-Entity-Model
         var startup = new Startup
         {
-            Name = registration.Name
+            Name = registration.Name,
             // Weitere Zuweisungen...
         };
 
@@ -26,4 +26,6 @@ public class StartupRegistrationService : IStartupRegistrationService
         _context.Startups.Add(startup);
         await _context.SaveChangesAsync();
     }
+
+
 }
