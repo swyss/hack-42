@@ -32,7 +32,7 @@ export default function CreateStartup() {
   const renderForm = () => {
     switch (currentStep) {
       case 1:
-        return <Consent parentSubmit={handleSubmit} />;
+        return <PersonalForm parentSubmit={handleSubmit} />;
       case 2:
         return <AcademiaForm parentSubmit={handleSubmit} />;
       case 3:
