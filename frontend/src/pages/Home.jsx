@@ -6,16 +6,12 @@ import PersonalForm from "@/components/form/personalForm/personalForm";
 import Login from "@/components/form/login/login";
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Hello</h1>
-      <Button>Register your Startup!</Button>
-      <div className="flex items-center justify-center">
-        <Login />
-        <PersonalForm />
-      </div>
-    </div>
-  );
-};
+
+    return (
+        <div className="section__padding">
+            <h1 className="text-3xl font-bold underline">Hello</h1>
+        </div>
+    )
+}
 
 export default Home;
