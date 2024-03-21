@@ -36,11 +36,11 @@ export default function CreateStartup() {
       case 2:
         return <AcademiaForm parentSubmit={handleSubmit} />;
       case 3:
-        return <StartupForm onSubmit={handleSubmit} />;
+        return <StartupForm parentSubmit={handleSubmit} />;
       case 4:
-        return <AdditonalForm onSubmit={handleSubmit} />;
+        return <AdditonalForm parentSubmit={handleSubmit} />;
       case 5:
-        return <Consent onSubmit={handleSubmit} />;
+        return <Consent parentSubmit={handleSubmit} />;
       default:
         return null;
     }
@@ -52,6 +52,7 @@ export default function CreateStartup() {
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-1xl font-bold">Step {currentStep} of 5</h2>
           {renderForm()}
+          <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
       </div>
     </div>
