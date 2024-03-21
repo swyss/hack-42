@@ -1,4 +1,12 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import CoachForm from "@/components/form/coach/CoachForm";
 
 const Coach = () => {
   const coach = [
@@ -60,52 +68,32 @@ const Coach = () => {
       </div>
       <div className="mt-8">
         <div>
-            
+          <CoachForm />
         </div>
         <Table>
-            <TableHeader>
-                <TableRow>
-                    <TableHead>
-                        Firstname
-                    </TableHead>
-                    <TableHead>
-                        Lastname
-                    </TableHead>
-                    <TableHead>
-                        Email
-                    </TableHead>
-                    <TableHead>
-                        Country
-                    </TableHead>
-                    <TableHead>
-                        Phone
-                    </TableHead>
-                </TableRow>
-            </TableHeader>
-            <TableBody>
-                {coach.map((item,index) => (
-                    <TableRow key={index}>
-                        <TableCell>
-                            {item.firstname}
-                        </TableCell>
-                        <TableCell>
-                            {item.lastname}
-                        </TableCell>
-                        <TableCell>
-                            {item.email}
-                        </TableCell>
-                        <TableCell>
-                            {item.country}
-                        </TableCell>
-                        <TableCell>
-                            {item.phone}
-                        </TableCell>
-                    </TableRow>
-                ))}
-                <TableRow>
-                    <TableCell></TableCell>
-                </TableRow>
-            </TableBody>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Firstname</TableHead>
+              <TableHead>Lastname</TableHead>
+              <TableHead>Email</TableHead>
+              <TableHead>Country</TableHead>
+              <TableHead>Phone</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {coach.map((item, index) => (
+              <TableRow key={index}>
+                <TableCell>{item.firstname}</TableCell>
+                <TableCell>{item.lastname}</TableCell>
+                <TableCell>{item.email}</TableCell>
+                <TableCell>{item.country}</TableCell>
+                <TableCell>{item.phone}</TableCell>
+              </TableRow>
+            ))}
+            <TableRow>
+              <TableCell></TableCell>
+            </TableRow>
+          </TableBody>
         </Table>
       </div>
     </div>
