@@ -36,10 +36,7 @@ public class PartnerController(IPartnerService partnerService) : ControllerBase
     [HttpPut("{id}")]
     public IActionResult PutPartner(int id, Partner partner)
     {
-        if (id != partner.PartnerId)
-        {
-            return BadRequest();
-        }
+        if (id != partner.PartnerId) return BadRequest();
 
         partnerService.UpdatePartner(partner);
 

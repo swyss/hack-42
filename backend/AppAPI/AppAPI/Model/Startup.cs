@@ -1,21 +1,26 @@
+using AppAPI.Model.StartupHelpers;
+
 namespace AppAPI.Model;
 
 public class Startup
 {
-    public Startup(int startupId, string name, DateTime foundingDate, string industry, string description, string status)
+    public Startup(int startupId, DateTime registrationDate, string status)
     {
         StartupId = startupId;
-        Name = name;
-        FoundingDate = foundingDate;
-        Industry = industry;
-        Description = description;
+        RegistrationDate = registrationDate;
         Status = status;
     }
 
+    public Startup()
+    {
+        throw new NotImplementedException();
+    }
+
     public int StartupId { get; set; }
+    public PersonalInfo PersonalInfo { get; set; }
+    public AcademiaInfo AcademiaInfo { get; set; }
+    public StartupInfo StartupInfo { get; set; }
+    public DateTime RegistrationDate { get; set; }
+    public string Status { get; set; }
     public string Name { get; set; }
-    public DateTime FoundingDate { get; set; }
-    public string Industry { get; set; }
-    public string Description { get; set; }
-    public string Status { get; set; } // z.B. In Gründung, Aktiv
 }

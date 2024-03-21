@@ -6,8 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the DI container.
 builder.Services.AddControllers();
+
+// Get connection string
+var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(conn));
 
 // reister Services
 builder.Services.AddScoped<IPartnerService, PartnerService>();

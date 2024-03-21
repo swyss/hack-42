@@ -1,20 +1,11 @@
 namespace AppAPI.Model;
 
-public class StartupApplication
+public class StartupApplication(int id, string startupName, string founderNames, string email, string description)
 {
-    public StartupApplication(int id, string startupName, string founderNames, string email, string description)
-    {
-        Id = id;
-        StartupName = startupName;
-        FounderNames = founderNames;
-        Email = email;
-        Description = description;
-    }
-
-    public int Id { get; set; }
-    public string StartupName { get; set; }
-    public string FounderNames { get; set; }
-    public string Email { get; set; }
-    public string Description { get; set; }
-    public DateTime ApplicationDate { get; set; } = DateTime.Now; // Standardmäßig auf das aktuelle Datum gesetzt
+    public int Id { get; set; } = id;
+    public string StartupName { get; set; } = startupName;
+    public string FounderNames { get; set; } = founderNames;
+    public string Email { get; set; } = email;
+    public string Description { get; set; } = description;
+    public DateTime ApplicationDate { get; set; } = DateTime.Now;
 }
