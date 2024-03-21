@@ -77,9 +77,26 @@ const frameworks = [
   },
 ];
 
+const StartupOverview = () => {
+  return (
+    <div className="w-4/5 p-4">
+      <div className="grid grid-cols-5 gap-4">
+        {frameworks.map((item, index) => (
+          <div className="cursor-pointer">
+            <Card className="h-40">{item.label}</Card>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const views = [<StartupOverview />, <Coach />, <Partners />];
+
 const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("current");
+
   const [Subbatches, setSubbatches] = useState([]);
 
   useEffect(() => {
