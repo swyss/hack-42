@@ -1,6 +1,8 @@
+using AppAPI.Model;
+
 namespace AppAPI.Service;
 
-public class IStartupApplicationService
+public interface IStartupApplicationService
 {
-    
+    Task ApplyAsync(StartupApplication application);
 }

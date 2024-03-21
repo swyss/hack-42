@@ -14,6 +14,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Partner> Partners { get; set; }
     public DbSet<Fellow> Fellows { get; set; }
     public DbSet<Startup> Startups { get; set; }
+    public DbSet<StartupApplication> StartupApplications { get; set; }  
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
