@@ -11,6 +11,7 @@ import Request from './pages/Request';
 import CreateStartup from "./pages/startup/create/create";
 import LoginPage from "./pages/login/login";
 import Overview from "./pages/startup/overview/overview";
+import RequestAdm from './pages/RequestAdm';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/partners' element={<Patrners />} />
         <Route path='/coach' element={<Coach />} />
         <Route path='/request' element={<Request />} />
+        <Route path='/requestadm' element={<RequestAdm />} />
       </Routes>
     </BrowserRouter>
   );
