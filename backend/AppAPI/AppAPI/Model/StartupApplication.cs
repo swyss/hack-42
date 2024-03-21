@@ -2,6 +2,7 @@ namespace AppAPI.Model;
 
 public class StartupApplication(int id, string startupName, string founderNames, string email, string description)
 {
+    
     public int Id { get; set; } = id;
     public string StartupName { get; set; } = startupName;
     public string FounderNames { get; set; } = founderNames;

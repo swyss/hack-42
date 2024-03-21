@@ -9,7 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feat (backend): add regstation and code clenaing" />
+    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="fix (backend): adjust registration">
+      <change afterPath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/AdditionalInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Controler/StartupApplicationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Controler/StartupApplicationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Controler/StartupController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Controler/StartupController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Model/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Model/StartupApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/StartupApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/StartupRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/StartupRegistration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Service/StartupHelpers/StartupRegistrationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Service/StartupHelpers/StartupRegistrationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,8 +40,10 @@
     <option name="projectConfigVersion" value="5" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/8e941eb42f819adb116b881195158b3887a70a1c/src/Mvc/Mvc.Core/src/FromBodyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/Controler/FellowController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/Controler/StartupController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/Model/StartupHelpers/AcademiaInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -153,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710983725424</updated>
-      <workItem from="1710983726836" duration="12052000" />
+      <workItem from="1710983726836" duration="15352000" />
     </task>
     <task id="LOCAL-00001" summary="feat (backend): add new project">
       <option name="closed" value="true" />
@@ -219,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711005805669</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix (backend): adjust registration">
+      <option name="closed" value="true" />
+      <created>1711005946819</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711005946819</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +265,7 @@
     <MESSAGE value="feat (backend): nice nice the" />
     <MESSAGE value="fix (backend): code cleaning" />
     <MESSAGE value="feat (backend): add regstation and code clenaing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (backend): add regstation and code clenaing" />
+    <MESSAGE value="fix (backend): adjust registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (backend): adjust registration" />
   </component>
 </project>

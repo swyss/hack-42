@@ -1,22 +1,32 @@
 using AppAPI.Model;
+using AppAPI.Model.StartupHelpers;
 using AppAPI.Service;
+using AppAPI.Service.StartupHelpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppAPI.Controler;
 
 [Route("api/[controller]")]
 [ApiController]
-public class StartupApplicationController(IStartupApplicationService applicationService) : ControllerBase
+public class StartupApplicationController(IStartupRegistrationService registrationService) : ControllerBase
 {
-    [HttpPost]
-    public async Task<IActionResult> Apply([FromBody] StartupApplication application)
+    // POST: api/Register
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody] StartupRegistration registration)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
-            await applicationService.ApplyAsync(application);
-            return Ok();
+            return BadRequest(ModelState);
         }
 
-        return BadRequest(ModelState);
+        try
+        {
+            await registrationService.RegisterAsync(registration);
+            return Ok("Startup successfully registered.");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Internal Server-Error: {ex.Message}");
+        }
     }
 }

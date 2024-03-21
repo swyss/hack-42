@@ -14,14 +14,18 @@ public class StartupRegistrationService : IStartupRegistrationService
 
     public async Task RegisterAsync(StartupRegistration registration)
     {
-        // Transformieren Sie das Registration-Model in ein Startup-Entity-Model
+        // transform the registration into a startup
         var startup = new Startup
         {
-            Name = registration.Name,
-            // Weitere Zuweisungen...
+            StartupId = 0,
+            PersonalInfo = null,
+            AcademiaInfo = null,
+            StartupInfo = null,
+            AdditionalInfo = null,
+            RegistrationDate = default,
+            Status = null,
         };
-
-        // Fügen Sie Ihre Geschäftslogik hinzu, z.B. Validierungen, zusätzliche Datenverarbeitung usw.
+        
 
         _context.Startups.Add(startup);
         await _context.SaveChangesAsync();

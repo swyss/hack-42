@@ -8,7 +8,7 @@ namespace AppAPI.Controler;
 
 [Route("api/[controller]")]
 [ApiController]
-public class StartupController(IStartupRegistrationService registrationService, IStartupService startupService)
+public class StartupController( IStartupService startupService)
     : ControllerBase
 {
     // GET: api/StartupHelpers
@@ -49,25 +49,7 @@ public class StartupController(IStartupRegistrationService registrationService, 
         return NoContent();
     }
     
-    // POST: api/Register
-    [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] StartupRegistration registration)
-    {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
-        try
-        {
-            await registrationService.RegisterAsync(registration);
-            return Ok("Startup successfully registered.");
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, $"Internal Server-Error: {ex.Message}");
-        }
-    }
+   
 
     // DELETE: api/StartupHelpers/5
     [HttpDelete("{id}")]

@@ -21,7 +21,7 @@ public class Startup
     public PersonalInfo PersonalInfo { get; set; }
     public AcademiaInfo AcademiaInfo { get; set; }
     public StartupInfo StartupInfo { get; set; }
+    public AdditionalInfo AdditionalInfo { get; set; }
     public DateTime RegistrationDate { get; set; }
     public string Status { get; set; }
-    public string Name { get; set; }
 }

@@ -19,7 +19,5 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
-        // Hier können Sie zusätzliche Konfigurationen für Ihre Modelle definieren, wie z.B. Schlüssel, Indizes, Beziehungen, etc.
     }
 }
