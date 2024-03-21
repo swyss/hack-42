@@ -290,11 +290,11 @@ const PartnerCard = ({ img, name, country, tags }) => {
 
 const Patrners = () => {
   return (
-    <div className="section__padding">
+    <div className="">
       <div>
         <h1 className="text-3xl font-bold">Partners START Fellowship</h1>
       </div>
-      <div className="mt-24">
+      <div className="mt-8">
         <AddPartner />
         <ComboboxForm />
         <div className="mt-2">filter</div>
