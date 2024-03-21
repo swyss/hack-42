@@ -90,6 +90,7 @@ export default function Chat({ chat }) {
                 className="border m-2"
                 value={MessageValue}
                 onChange={handleChange}
+                placeholder="Your message"
               />
               <Button onClick={handleSendMessage}>Send message</Button>
             </div>
