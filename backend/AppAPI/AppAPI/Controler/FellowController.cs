@@ -6,20 +6,13 @@ namespace AppAPI.Controler;
 
 [Route("api/[controller]")]
 [ApiController]
-public class FellowController : ControllerBase
+public class FellowController(IFellowService fellowService) : ControllerBase
 {
-    private readonly IFellowService _fellowService;
-
-    public FellowController(IFellowService fellowService)
-    {
-        _fellowService = fellowService;
-    }
-
     // GET: api/Fellow
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Fellow>>> GetAllFellows()
     {
-        var fellows = await _fellowService.GetAllFellowsAsync();
+        var fellows = await fellowService.GetAllFellowsAsync();
         return Ok(fellows);
     }
 
@@ -27,12 +20,7 @@ public class FellowController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<Fellow>> GetFellow(int id)
     {
-        var fellow = await _fellowService.GetFellowByIdAsync(id);
-
-        if (fellow == null)
-        {
-            return NotFound();
-        }
+        var fellow = await fellowService.GetFellowByIdAsync(id);
 
         return Ok(fellow);
     }
@@ -41,7 +29,7 @@ public class FellowController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Fellow>> CreateFellow(Fellow fellow)
     {
-        await _fellowService.CreateFellowAsync(fellow);
+        await fellowService.CreateFellowAsync(fellow);
         return CreatedAtAction(nameof(GetFellow), new { id = fellow.FellowId }, fellow);
     }
 
@@ -54,7 +42,7 @@ public class FellowController : ControllerBase
             return BadRequest();
         }
 
-        await _fellowService.UpdateFellowAsync(fellow);
+        await fellowService.UpdateFellowAsync(fellow);
         return NoContent();
     }
 
@@ -62,7 +50,7 @@ public class FellowController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteFellow(int id)
     {
-        await _fellowService.DeleteFellowAsync(id);
+        await fellowService.DeleteFellowAsync(id);
         return NoContent();
     }
 }

@@ -29,11 +29,6 @@ public class StartupController : ControllerBase
     {
         var startup = await _startupService.GetStartupByIdAsync(id);
 
-        if (startup == null)
-        {
-            return NotFound();
-        }
-
         return Ok(startup);
     }
 

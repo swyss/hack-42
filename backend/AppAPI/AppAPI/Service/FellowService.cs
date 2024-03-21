@@ -19,7 +19,7 @@ public class FellowService : IFellowService
 
     public async Task<Fellow> GetFellowByIdAsync(int id)
     {
-        return await _context.Fellows.FindAsync(id);
+        return await _context.Fellows.FindAsync(id) ?? throw new InvalidOperationException();
     }
 
     public async Task CreateFellowAsync(Fellow fellow)

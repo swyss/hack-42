@@ -19,7 +19,7 @@ public class PartnerService : IPartnerService
 
     public async Task<Partner> GetPartnerByIdAsync(int id)
     {
-        return await _context.Partners.FindAsync(id);
+        return await _context.Partners.FindAsync(id) ?? throw new InvalidOperationException();
     }
 
     public async Task CreatePartnerAsync(Partner partner)

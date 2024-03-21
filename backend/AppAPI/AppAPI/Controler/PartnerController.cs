@@ -6,32 +6,20 @@ namespace AppAPI.Controler;
 
 [Route("api/[controller]")]
 [ApiController]
-public class PartnerController : ControllerBase
+public class PartnerController(IPartnerService partnerService) : ControllerBase
 {
-    private readonly IPartnerService _partnerService;
-
-    public PartnerController(IPartnerService partnerService)
-    {
-        _partnerService = partnerService;
-    }
-
     // GET: api/Partner
     [HttpGet]
     public ActionResult<IEnumerable<Partner>> GetPartners()
     {
-        return Ok(_partnerService.GetAllPartners());
+        return Ok(partnerService.GetAllPartners());
     }
 
     // GET: api/Partner/5
     [HttpGet("{id}")]
     public ActionResult<Partner> GetPartner(int id)
     {
-        var partner = _partnerService.GetPartnerById(id);
-
-        if (partner == null)
-        {
-            return NotFound();
-        }
+        var partner = partnerService.GetPartnerById(id);
 
         return Ok(partner);
     }
@@ -40,7 +28,7 @@ public class PartnerController : ControllerBase
     [HttpPost]
     public ActionResult<Partner> PostPartner(Partner partner)
     {
-        _partnerService.CreatePartner(partner);
+        partnerService.CreatePartner(partner);
         return CreatedAtAction(nameof(GetPartner), new { id = partner.PartnerId }, partner);
     }
 
@@ -53,7 +41,7 @@ public class PartnerController : ControllerBase
             return BadRequest();
         }
 
-        _partnerService.UpdatePartner(partner);
+        partnerService.UpdatePartner(partner);
 
         return NoContent();
     }
@@ -62,7 +50,7 @@ public class PartnerController : ControllerBase
     [HttpDelete("{id}")]
     public IActionResult DeletePartner(int id)
     {
-        _partnerService.DeletePartner(id);
+        partnerService.DeletePartner(id);
         return NoContent();
     }
 }
