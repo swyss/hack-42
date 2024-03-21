@@ -26,4 +26,5 @@ export const StartupSchema = z.object({
     .max(100, "Why START Fellowship can't exceed 100 letters"),
   coFounderCount: z.string(),
   coFounderNames: z.string(),
+  pitchDeck: z.string().min(1, "Please upload your Pitch deck"),
 });

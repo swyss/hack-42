@@ -31,9 +31,9 @@ export default function CreateStartup() {
       case 2:
         return <AcademiaForm parentSubmit={handleSubmit} />;
       case 3:
-        return <Form3 onSubmit={handleSubmit} setData={setData} />;
+        return <StartupForm onSubmit={handleSubmit} />;
       case 4:
-        return <Form4 onSubmit={handleSubmit} setData={setData} />;
+        return <Form4 onSubmit={handleSubmit} />;
       case 5:
         return <Form5 onSubmit={handleSubmit} />;
       default:

@@ -191,6 +191,41 @@ export default function StartupForm({ parentSubmit }) {
                 )}
               />
             </div>
+            <FormField
+              control={form.control}
+              name="pitchDeck"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Pitch deck</FormLabel>
+                  <FormControl>
+                    <Input type="file" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    6-8 pages
+                    <ul>
+                      <li>P. 1: Title</li>
+                      <li>P. 2: Problem statement</li>
+                      <li>P. 3: Solution</li>
+                      <li>
+                        P. 4: Market (e.g. competition and differentiation from
+                        competitors)
+                      </li>
+                      <li>P. 5: Team</li>
+                      <li>
+                        P. 6: Market volume/Target market (e.g. use TAM SAM SOM
+                        model)
+                      </li>
+                      <li>
+                        P. 7: Cost/Finance (e.g. customer acquisition cost and
+                        other KPIs)
+                      </li>
+                      <li>P. 8: "Surprise Slide"</li>
+                    </ul>
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </div>
 
           <Button type="submit">Next</Button>
