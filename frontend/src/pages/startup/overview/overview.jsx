@@ -1,7 +1,10 @@
 import React from "react";
 import StartupDetails from "@/components/startupDisplay/startupDetails";
+import { useSearchParams } from "react-router-dom";
 
 export default function Overview() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  alert(searchParams.get("id"));
   let startupDetails = {
     name: "Test Startup",
     logo: "https://picsum.photos/id/237/200/300",
