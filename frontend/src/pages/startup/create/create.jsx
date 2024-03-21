@@ -10,7 +10,7 @@ export default function CreateStartup() {
     personal: {},
     academia: {},
     startup: {},
-    Additional: {},
+    additional: {},
   });
   const handleSubmit = (data) => {
     //ADD to useState
