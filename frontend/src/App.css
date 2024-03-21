@@ -14,6 +14,16 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none; /* Removes the bullet or number */
+  margin: 0; /* Removes the default margin */
+  padding: 0; /* Removes the default padding */
+}
+
+.debug {
+  border: 1px solid red;
+}
+
 .section__padding {
   padding: 4rem 6rem;
 }
