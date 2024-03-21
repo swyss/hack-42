@@ -7,6 +7,7 @@ import Patrners from './pages/Partners';
 import AdmDashboard from './pages/AdmDashboard';
 import Coach from './pages/Coach';
 import Dashboard from './pages/Dashboard';
+import Request from './pages/Request';
 import CreateStartup from "./pages/startup/create/create";
 import LoginPage from "./pages/login/login";
 import Overview from "./pages/startup/overview/overview";
@@ -22,6 +23,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/partners' element={<Patrners />} />
         <Route path='/coach' element={<Coach />} />
+        <Route path='/request' element={<Request />} />
       </Routes>
     </BrowserRouter>
   );
