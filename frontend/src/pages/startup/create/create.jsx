@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PersonalForm from "@/components/form/personalForm/personalForm";
 import AcademiaForm from "@/components/form/academia/academiaForm";
+import StartupForm from "@/components/form/startup/startupForm";
 
 export default function CreateStartup() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -26,7 +27,7 @@ export default function CreateStartup() {
   const renderForm = () => {
     switch (currentStep) {
       case 1:
-        return <PersonalForm parentSubmit={handleSubmit} />;
+        return <StartupForm parentSubmit={handleSubmit} />;
       case 2:
         return <AcademiaForm parentSubmit={handleSubmit} />;
       case 3:
