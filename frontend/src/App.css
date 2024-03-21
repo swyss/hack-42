@@ -24,6 +24,10 @@ li {
   border: 1px solid red;
 }
 
+.fullHeightDiv {
+  height: 100vh;
+}
+
 .section__padding {
   padding: 4rem 6rem;
 }

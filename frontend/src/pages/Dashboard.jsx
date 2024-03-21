@@ -25,6 +25,26 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Coach from "./Coach";
+import Partners from "./Partners";
+
+const menu = [
+  {
+    label: "Home",
+  },
+  {
+    label: "Startup Application",
+  },
+  {
+    label: "Startup Request",
+  },
+  {
+    label: "Coach/Mentor",
+  },
+  {
+    label: "Partners",
+  },
+];
 
 const frameworks = [
   {
@@ -42,35 +62,45 @@ const frameworks = [
     ],
   },
   {
-    value: "badge2024Q4",
-    label: "Badge 2024 Q4",
-    batchs: [
-      {
-        id: 12344,
-        name: "Test Startup in past badge",
-      },
-      {
-        id: 12233,
-        name: "Startup let's go",
-      },
-    ],
+    value: "remix",
+    label: "Remix",
+  },
+  {
+    value: "astro",
+    label: "Astro",
   },
 ];
+
+const StartupOverview = () => {
+  return (
+    <div className="w-4/5 p-4">
+      <div className="grid grid-cols-5 gap-4">
+        {frameworks.map((item, index) => (
+          <div className="cursor-pointer">
+            <Card className="h-40">{item.label}</Card>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const views = [<StartupOverview />, <Coach />, <Partners />];
 
 const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("current");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [viewIndex, setViewIndex] = useState(0);
   const [Subbatches, setSubbatches] = useState([]);
   useEffect(() => {
     if (!value) {
       return;
     }
-
     setSubbatches(frameworks.find((frame) => frame.value === value).batchs);
   }, [value]);
   return (
-    <div className="section__padding">
+    <div className="section__padding fullHeightDiv debug">
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
       </div>
@@ -124,10 +154,14 @@ const Dashboard = () => {
           </Popover>
         </div>
         <div className="w-full flex mt-4">
-          <div className="w-[200px] debug mr-4">
-            <li>
-              {frameworks.map((item, index) => (
-                <ul key={index} className="mb-1">
+          <div className="w-[200px] h-full  mr-4">
+            <ul>
+              {" "}
+              {/* This ul tag should wrap all list items */}
+              {menu.map((item, index) => (
+                <li key={index} className="mb-1">
+                  {" "}
+                  {/* Each item is an li, not ul */}
                   <Button
                     variant="ghost"
                     className={`w-full justify-start ${
@@ -135,30 +169,18 @@ const Dashboard = () => {
                         ? "bg-accent text-accent-foreground"
                         : ""
                     }`}
-                    onClick={() => setActiveIndex(index)}
+                    onClick={() => {
+                      setActiveIndex(index);
+                      setViewIndex(index);
+                    }}
                   >
                     {item.label}
                   </Button>
-                </ul>
+                </li>
               ))}
-            </li>
+            </ul>
           </div>
-          <div className="w-4/5 debug p-4">
-            <div className="grid grid-cols-5 gap-4">
-              {Subbatches.map((item, index) => (
-                <div className="cursor-pointer">
-                  <Card
-                    className="p-5 flex justify-center items-center"
-                    onClick={() => {
-                      location.href = `/startup/overview?id=${item.id}`;
-                    }}
-                  >
-                    {item.name}
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="w-full">{views[viewIndex]}</div>
         </div>
       </div>
     </div>
