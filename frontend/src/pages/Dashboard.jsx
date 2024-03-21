@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -28,32 +28,47 @@ import {
 
 const frameworks = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "current",
+    label: "Current Bagde",
+    batchs: [
+      {
+        id: 1111,
+        name: "Test Startup in current badge",
+      },
+      {
+        id: 1122,
+        name: "Another Startup",
+      },
+    ],
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
-  },
-  {
-    value: "nuxt.js",
-    label: "Nuxt.js",
-  },
-  {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
+    value: "badge2024Q4",
+    label: "Badge 2024 Q4",
+    batchs: [
+      {
+        id: 12344,
+        name: "Test Startup in past badge",
+      },
+      {
+        id: 12233,
+        name: "Startup let's go",
+      },
+    ],
   },
 ];
 
 const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState("current");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [Subbatches, setSubbatches] = useState([]);
+  useEffect(() => {
+    if (!value) {
+      return;
+    }
 
+    setSubbatches(frameworks.find((frame) => frame.value === value).batchs);
+  }, [value]);
   return (
     <div className="section__padding">
       <div>
@@ -116,7 +131,9 @@ const Dashboard = () => {
                   <Button
                     variant="ghost"
                     className={`w-full justify-start ${
-                      index === activeIndex ? "bg-accent text-accent-foreground" : ""
+                      index === activeIndex
+                        ? "bg-accent text-accent-foreground"
+                        : ""
                     }`}
                     onClick={() => setActiveIndex(index)}
                   >
@@ -128,9 +145,16 @@ const Dashboard = () => {
           </div>
           <div className="w-4/5 debug p-4">
             <div className="grid grid-cols-5 gap-4">
-              {frameworks.map((item, index) => (
+              {Subbatches.map((item, index) => (
                 <div className="cursor-pointer">
-                  <Card className="h-40">{item.label}</Card>
+                  <Card
+                    className="p-5 flex justify-center items-center"
+                    onClick={() => {
+                      location.href = `/startup/overview?id=${item.id}`;
+                    }}
+                  >
+                    {item.name}
+                  </Card>
                 </div>
               ))}
             </div>
