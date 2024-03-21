@@ -9,9 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feater (backend): add partner api path (model, service, controler)">
-      <change afterPath="$PROJECT_DIR$/AppAPI/Service/FellowService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/Service/IFellowService.cs" afterDir="false" />
+    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feat (backend): add some  magic">
+      <change afterPath="$PROJECT_DIR$/AppAPI/Controler/FellowController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/Controler/StartupController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/Service/IStartupService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Service/IFellowService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Service/IFellowService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,8 @@
     <option name="projectConfigVersion" value="5" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -144,7 +150,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710983725424</updated>
-      <workItem from="1710983726836" duration="945000" />
+      <workItem from="1710983726836" duration="1593000" />
     </task>
     <task id="LOCAL-00001" summary="feat (backend): add new project">
       <option name="closed" value="true" />
@@ -170,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710984562726</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat (backend): add some services">
+      <option name="closed" value="true" />
+      <created>1710984715700</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710984715701</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat (backend): add some  magic">
+      <option name="closed" value="true" />
+      <created>1710984957518</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710984957518</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +205,8 @@
     <MESSAGE value="feat (backend): add new project" />
     <MESSAGE value="feat (backend): add models" />
     <MESSAGE value="feater (backend): add partner api path (model, service, controler)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feater (backend): add partner api path (model, service, controler)" />
+    <MESSAGE value="feat (backend): add some services" />
+    <MESSAGE value="feat (backend): add some  magic" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (backend): add some  magic" />
   </component>
 </project>
