@@ -18,7 +18,7 @@ public class StartupRegistrationService : IStartupRegistrationService
         var startup = new Startup
         {
             StartupId = 0,
-            PersonalInfo = null,
+            PersonalInfo = new PersonalInfo(registration.FounderFirstName, registration.FounderLastName,Convert.ToDateTime(registration.FounderDateOfBirth),registration.FounderGender,registration.FounderEmail, registration.FounderPhone,registration.FounderAddressCity,registration.FounderAddressZIP,registration.FounderAddressCountry,registration.FounderAddressStreet,registration.FounderAddressNumber,registration.FounderEU,registration.FounderNationality,registration.FounderLinkedIn),
             AcademiaInfo = null,
             StartupInfo = null,
             AdditionalInfo = null,

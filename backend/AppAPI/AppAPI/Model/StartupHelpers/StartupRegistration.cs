@@ -6,7 +6,7 @@ public class StartupRegistration
     {
         FounderFirstName = founderFirstName;
         FounderLastName = founderLastName;
-        FounderdateOfBirth = founderdateOfBirth;
+        FounderDateOfBirth = founderdateOfBirth;
         FounderGender = founderGender;
         FounderEmail = founderEmail;
         FounderPhone = founderPhone;
@@ -40,7 +40,7 @@ public class StartupRegistration
 // personal data
     public string FounderFirstName { get; set; }
     public string FounderLastName { get; set; }
-    public string FounderdateOfBirth { get; set; }
+    public string FounderDateOfBirth { get; set; }
     public string FounderGender { get; set; }
     public string FounderEmail { get; set; }
     public string FounderPhone { get; set; }
