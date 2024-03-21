@@ -23,6 +23,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <NavigationMenuItem> <a href="/partners" legacyBehavior passHref>
                         <NavigationMenuLink> PARTNERS </NavigationMenuLink> </a>
                     </NavigationMenuItem>
+                    <NavigationMenuItem> <a href="/coach" legacyBehavior passHref>
+                        <NavigationMenuLink> COACHES </NavigationMenuLink> </a>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem> <a href="/startup/overview" legacyBehavior passHref>
+                        <NavigationMenuLink> STARTUPS </NavigationMenuLink> </a>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem> <a href="/login" legacyBehavior passHref>
+                        <NavigationMenuLink> LOGIN </NavigationMenuLink> </a>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
         </header>
