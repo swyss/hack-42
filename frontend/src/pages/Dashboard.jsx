@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/card";
 import Coach from "./Coach";
 import Partners from "./Partners";
+import RequestAdm from "./RequestAdm";
 
 const menu = [
   {
@@ -91,7 +92,7 @@ const StartupOverview = () => {
   );
 };
 
-const views = [<StartupOverview />, <Coach />, <Partners />];
+const views = [<StartupOverview />, <Coach />, <RequestAdm />, <Partners />];
 
 const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
@@ -126,7 +127,7 @@ const Dashboard = () => {
       </div>
     );
   };
-  const views = [<StartupOverview />, <Coach />, <Partners />];
+  const views = [<StartupOverview />, <Coach />, <RequestAdm />, <Partners />];
   const [viewIndex, setViewIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
