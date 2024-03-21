@@ -16,7 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
+import { data } from "@/lib/mockdata";
 import {
   Card,
   CardContent,
@@ -46,7 +46,7 @@ const menu = [
   },
 ];
 
-const frameworks = [
+/* const frameworks = [
   {
     value: "current",
     label: "Current Bagde",
@@ -75,13 +75,13 @@ const frameworks = [
       },
     ],
   },
-];
+]; */
 
 const StartupOverview = () => {
   return (
     <div className="w-4/5 p-4">
       <div className="grid grid-cols-5 gap-4">
-        {frameworks.map((item, index) => (
+        {data.map((item, index) => (
           <div className="cursor-pointer">
             <Card className="h-40">{item.label}</Card>
           </div>
@@ -103,10 +103,9 @@ const Dashboard = () => {
     if (!value) {
       return;
     }
-    setSubbatches(frameworks.find((frame) => frame.value === value).batchs);
+    setSubbatches(data.find((frame) => frame.value === value).batchs);
   }, [value]);
   const StartupOverview = () => {
-    
     return (
       <div className="w-4/5 debug p-4">
         <div className="grid grid-cols-5 gap-4">
@@ -146,8 +145,7 @@ const Dashboard = () => {
                 className="w-[200px] justify-between"
               >
                 {value
-                  ? frameworks.find((framework) => framework.value === value)
-                      ?.label
+                  ? data.find((framework) => framework.value === value)?.label
                   : "Select batch..."}
                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
               </Button>
@@ -158,7 +156,7 @@ const Dashboard = () => {
                 <CommandEmpty>No batch found.</CommandEmpty>
                 <CommandGroup>
                   <CommandList>
-                    {frameworks.map((framework) => (
+                    {data.map((framework) => (
                       <CommandItem
                         key={framework.value}
                         value={framework.value}
@@ -214,10 +212,9 @@ const Dashboard = () => {
             {/* Correct placement of the <ul> closing tag */}
           </div>
           <div className="w-4/5 debug p-4">
-          <div className="w-full">{views[viewIndex]}</div>
+            <div className="w-full">{views[viewIndex]}</div>
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   );
