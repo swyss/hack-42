@@ -62,43 +62,57 @@ const frameworks = [
     ],
   },
   {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
+    value: "badge2024Q4",
+    label: "Badge 2024 Q4",
+    batchs: [
+      {
+        id: 12344,
+        name: "Test Startup in past badge",
+      },
+      {
+        id: 12233,
+        name: "Startup let's go",
+      },
+    ],
   },
 ];
-
-const StartupOverview = () => {
-  return (
-    <div className="w-4/5 p-4">
-      <div className="grid grid-cols-5 gap-4">
-        {frameworks.map((item, index) => (
-          <div className="cursor-pointer">
-            <Card className="h-40">{item.label}</Card>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const views = [<StartupOverview />, <Coach />, <Partners />];
 
 const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("current");
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [viewIndex, setViewIndex] = useState(0);
   const [Subbatches, setSubbatches] = useState([]);
+  
   useEffect(() => {
     if (!value) {
       return;
     }
     setSubbatches(frameworks.find((frame) => frame.value === value).batchs);
   }, [value]);
+  const StartupOverview = () => {
+    
+    return (
+      <div className="w-4/5 debug p-4">
+        <div className="grid grid-cols-5 gap-4">
+          {Subbatches.map((item, index) => (
+            <div className="cursor-pointer">
+              <Card
+                className="p-5 flex justify-center items-center"
+                onClick={() => {
+                  location.href = `/startup/overview?id=${item.id}`;
+                }}
+              >
+                {item.name}
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+  const views = [<StartupOverview />, <Coach />, <Partners />];
+  const [viewIndex, setViewIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <div className="section__padding fullHeightDiv debug">
       <div>
