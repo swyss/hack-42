@@ -5,27 +5,30 @@
     <projectFile profileName="http">AppAPI/AppAPI.csproj</projectFile>
     <projectFile profileName="https">AppAPI/AppAPI.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feat (backend): add new project">
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.AppAPI.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AppAPI.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AppAPI.props" afterDir="false" />
+    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feat (backend): add models">
+      <change afterPath="$PROJECT_DIR$/AppAPI/ApplicationDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/Controler/PartnerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/Service/IPartnerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/Service/PartnerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppAPI/AppAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/AppAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/AppAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/AppAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/AppAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/AppAPI.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/AppAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/AppAPI.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -156,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710983725424</updated>
-      <workItem from="1710983726836" duration="327000" />
+      <workItem from="1710983726836" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="feat (backend): add new project">
       <option name="closed" value="true" />
@@ -166,16 +170,26 @@
       <option name="project" value="LOCAL" />
       <updated>1710983963112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat (backend): add models">
+      <option name="closed" value="true" />
+      <created>1710984216082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710984216082</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat (backend): add new project" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (backend): add new project" />
+    <MESSAGE value="feat (backend): add models" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (backend): add models" />
   </component>
 </project>
