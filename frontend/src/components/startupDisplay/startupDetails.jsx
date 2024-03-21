@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import FounderDetails from "./founderDetails";
 import { Button } from "../ui/button";
+import Chat from "../chat/chat";
 
 export default function StartupDetails({ props }) {
   return (
@@ -9,13 +10,16 @@ export default function StartupDetails({ props }) {
       <div className="flex-row flex gap-5 items-center justify-center">
         <div className="flex flex-col">
           <p className="text-3xl font-bold">{props.name}</p>
-          <Button
-            onClick={() => {
-              location.href = "/request";
-            }}
-          >
-            Add Request
-          </Button>
+          <div className="flex flex-row gap-2">
+            <Chat chat={props.chat} />
+            <Button
+              onClick={() => {
+                location.href = "/request";
+              }}
+            >
+              Add Request
+            </Button>
+          </div>
         </div>
 
         <img src={props.logo} />

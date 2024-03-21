@@ -18,6 +18,52 @@ export const data = [
           city: "Basel",
           country: "Switzerland",
         },
+        chat: [
+          {
+            message:
+              "Hello and Welcome to our platform! Please ask us any questions if you need help!",
+            isAdmin: true,
+            time: "18:20",
+          },
+          {
+            message: "Hello! Thank you for supporting our startup!",
+            isAdmin: false,
+            time: "18:30",
+          },
+          {
+            message: "How can I apply for support from your company?",
+            isAdmin: false,
+            time: "19:00",
+          },
+          {
+            message:
+              "To apply for support, visit our website's 'Support' page and fill out the application form. Our team will review your application and get back to you.",
+            isAdmin: true,
+            time: "19:40",
+          },
+          {
+            message: "What kind of support do you offer to startups?",
+            isAdmin: false,
+            time: "20:10",
+          },
+          {
+            message:
+              "We offer a range of support services including mentorship, funding assistance, networking opportunities, and access to resources and tools.",
+            isAdmin: true,
+            time: "20:25",
+          },
+          {
+            message: "How long does the application review process take?",
+            isAdmin: false,
+            time: "21:00",
+          },
+          {
+            message:
+              "The application review process typically takes around 2-4 weeks, depending on the volume of applications we receive and the complexity of your request.",
+            isAdmin: true,
+            time: "21:10",
+          },
+        ],
       },
       {
         id: 1122,
@@ -34,6 +80,40 @@ export const data = [
           city: "München",
           country: "Germany",
         },
+        chat: [
+          {
+            message:
+              "Hello and Welcome to our platform! Please ask us any questions if you need help!",
+            isAdmin: true,
+            time: "18:20",
+          },
+          {
+            message: "Hello thank you for supporting our startup!",
+            isAdmin: false,
+            time: "18:30",
+          },
+          {
+            message: "How can I create a new request?",
+            isAdmin: false,
+            time: "19:00",
+          },
+          {
+            message: "You can find the request section in your dashboard",
+            isAdmin: true,
+            time: "19:40",
+          },
+          {
+            message: "How do I request coaching?",
+            isAdmin: false,
+            time: "20:10",
+          },
+          {
+            message:
+              "To request coaching, visit the 'Coaching' section and click on the 'Request Coaching' button.",
+            isAdmin: true,
+            time: "20:25",
+          },
+        ],
       },
     ],
   },
@@ -56,6 +136,66 @@ export const data = [
           city: "München",
           country: "Germany",
         },
+        chat: [
+          {
+            message:
+              "Hello and Welcome to our platform! Please ask us any questions if you need help!",
+            isAdmin: true,
+            time: "18:20",
+          },
+          {
+            message: "Hi there! I'm excited to explore your platform.",
+            isAdmin: false,
+            time: "18:30",
+          },
+          {
+            message: "How can I connect with other startups on your platform?",
+            isAdmin: false,
+            time: "19:00",
+          },
+          {
+            message:
+              "You can connect with other startups through our community forum or by attending our networking events.",
+            isAdmin: true,
+            time: "19:40",
+          },
+          {
+            message:
+              "That sounds great! Do you provide any workshops or training sessions for startups?",
+            isAdmin: false,
+            time: "20:10",
+          },
+          {
+            message:
+              "Yes, we regularly organize workshops and training sessions covering various topics such as business development, marketing strategies, and fundraising.",
+            isAdmin: true,
+            time: "20:25",
+          },
+          {
+            message:
+              "How can I access funding opportunities through your platform?",
+            isAdmin: false,
+            time: "21:00",
+          },
+          {
+            message:
+              "You can explore funding opportunities through our 'Resources' section where we list available grants, investor contacts, and funding programs.",
+            isAdmin: true,
+            time: "21:10",
+          },
+          {
+            message:
+              "Thank you for the information! I'm looking forward to leveraging your platform for our startup.",
+            isAdmin: false,
+            time: "21:30",
+          },
+          {
+            message:
+              "You're welcome! If you have any more questions or need assistance, feel free to reach out anytime.",
+            isAdmin: true,
+            time: "21:45",
+          },
+        ],
       },
     ],
   },
