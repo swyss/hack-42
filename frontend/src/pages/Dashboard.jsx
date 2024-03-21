@@ -97,12 +97,13 @@ const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("current");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [viewIndex, setViewIndex] = useState(0);
   const [Subbatches, setSubbatches] = useState([]);
+
   useEffect(() => {
     if (!value) {
       return;
     }
-  const [viewIndex, setViewIndex] = useState(0);
 
     setSubbatches(frameworks.find((frame) => frame.value === value).batchs);
   }, [value]);
@@ -161,54 +162,39 @@ const Dashboard = () => {
           </Popover>
         </div>
         <div className="w-full flex mt-4">
-          <div className="w-[200px] h-full  mr-4">
+          <div className="w-[200px] h-full mr-4">
             <ul>
               {" "}
-              {/* This ul tag should wrap all list items */}
+              {/* Correct placement of the <ul> opening tag */}
               {menu.map((item, index) => (
                 <li key={index} className="mb-1">
                   {" "}
-                  {/* Each item is an li, not ul */}
+                  {/* Each item is correctly an <li> */}
                   <Button
                     variant="ghost"
                     className={`w-full justify-start ${
                       index === activeIndex
                         ? "bg-accent text-accent-foreground"
                         : ""
-                      index === activeIndex
-                        ? "bg-accent text-accent-foreground"
-                        : ""
-                    }`}
+                    }`} // Corrected conditional class application
                     onClick={() => {
                       setActiveIndex(index);
                       setViewIndex(index);
                     }}
                   >
                     {item.label}
-                  </Button>
-                </ul>
-              ))}
-            </li>
-          </div>
-          <div className="w-4/5 debug p-4">
-            <div className="grid grid-cols-5 gap-4">
-              {Subbatches.map((item, index) => (
-                <div className="cursor-pointer">
-                  <Card
-                    className="p-5 flex justify-center items-center"
-                    onClick={() => {
-                      location.href = `/startup/overview?id=${item.id}`;
-                    }}
-                  >
-                    {item.name}
-                  </Card>
-                </div>
+                  </Button>{" "}
+                  {/* Assuming Button is a self-closing component */}
                 </li>
               ))}
-            </ul>
+            </ul>{" "}
+            {/* Correct placement of the <ul> closing tag */}
           </div>
+          <div className="w-4/5 debug p-4">
           <div className="w-full">{views[viewIndex]}</div>
         </div>
+        </div>
+        
       </div>
     </div>
   );
