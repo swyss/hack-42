@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 import PersonalForm from "@/components/form/personalForm/personalForm";
+import AcademiaForm from "@/components/form/academia/academiaForm";
 const Home = () => {
   return (
     <div>
@@ -8,6 +9,7 @@ const Home = () => {
       <Button>Register your Startup!</Button>
       <div className="flex items-center justify-center">
         <PersonalForm />
+        <AcademiaForm />
       </div>
     </div>
   );

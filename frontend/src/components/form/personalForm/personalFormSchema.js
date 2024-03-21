@@ -1,10 +1,5 @@
 import { z } from "zod";
 import validator, { isEmail } from "validator";
-const birthdaySchema = z.object({
-  month: z.number(),
-  day: z.number(),
-  year: z.number(),
-});
 export const PersonalFormSchema = z.object({
   firstname: z
     .string()
@@ -29,7 +24,11 @@ export const PersonalFormSchema = z.object({
   EU_pass: z.enum(["true", "false"], {
     required_error: "You need to select if you have an EU Passport",
   }),
-});
-PersonalFormSchema.extend({
-  birthday: birthdaySchema,
+  linkedIn: z
+    .string()
+    .regex(
+      /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/,
+      "Please enter a valid URL"
+    ),
+  birthday: z.coerce.date(),
 });
