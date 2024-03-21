@@ -3,6 +3,7 @@ import PersonalForm from "@/components/form/personalForm/personalForm";
 import AcademiaForm from "@/components/form/academia/academiaForm";
 import StartupForm from "@/components/form/startup/startupForm";
 import AdditonalForm from "@/components/form/additional/additionalForm";
+import Consent from "@/components/form/consent/consent";
 
 export default function CreateStartup() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -18,6 +19,9 @@ export default function CreateStartup() {
       ...prevData,
       [`${data.stepName}`]: data,
     }));
+    if (currentStep === 5) {
+      //TODO Call backend with the data!
+    }
     // Handle form submission logic here if needed
     // For simplicity, we'll just move to the next step
     if (currentStep < 5) {
@@ -28,7 +32,7 @@ export default function CreateStartup() {
   const renderForm = () => {
     switch (currentStep) {
       case 1:
-        return <PersonalForm parentSubmit={handleSubmit} />;
+        return <Consent parentSubmit={handleSubmit} />;
       case 2:
         return <AcademiaForm parentSubmit={handleSubmit} />;
       case 3:
@@ -36,7 +40,7 @@ export default function CreateStartup() {
       case 4:
         return <AdditonalForm onSubmit={handleSubmit} />;
       case 5:
-        return <Form5 onSubmit={handleSubmit} />;
+        return <Consent onSubmit={handleSubmit} />;
       default:
         return null;
     }
@@ -48,7 +52,6 @@ export default function CreateStartup() {
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-1xl font-bold">Step {currentStep} of 5</h2>
           {renderForm()}
-          <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
       </div>
     </div>
