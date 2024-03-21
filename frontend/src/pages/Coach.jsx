@@ -54,11 +54,11 @@ const Coach = () => {
   ];
 
   return (
-    <div className="section__padding">
+    <div className="">
       <div>
         <h1 className="text-3xl font-bold">Coach</h1>
       </div>
-      <div className="mt-24">
+      <div className="mt-8">
         <div>
             
         </div>
