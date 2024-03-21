@@ -1,4 +1,5 @@
 using AppAPI.Model;
+using AppAPI.Model.StartupHelpers;
 
 namespace AppAPI;
 
@@ -15,7 +16,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<Fellow> Fellows { get; set; }
     public DbSet<Startup> Startups { get; set; }
     public DbSet<StartupApplication> StartupApplications { get; set; }  
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
