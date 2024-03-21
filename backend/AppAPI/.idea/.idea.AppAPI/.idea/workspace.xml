@@ -9,19 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feat (backend): add registration including json request">
+    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="feat (backend): add PersonalInfo logic">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/PersonalInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/PersonalInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/StartupRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/StartupRegistration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/Service/StartupHelpers/StartupRegistrationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Service/StartupHelpers/StartupRegistrationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/AcademiaInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/AcademiaInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/AdditionalInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Model/StartupHelpers/AdditionalInfo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +30,8 @@
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/Controler/FellowController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/Controler/StartupController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/Model/StartupHelpers/AcademiaInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/hack-42/backend/AppAPI/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -168,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710983725424</updated>
-      <workItem from="1710983726836" duration="16656000" />
+      <workItem from="1710983726836" duration="18011000" />
     </task>
     <task id="LOCAL-00001" summary="feat (backend): add new project">
       <option name="closed" value="true" />
@@ -250,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711009336763</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat (backend): add PersonalInfo logic">
+      <option name="closed" value="true" />
+      <created>1711010749591</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711010749591</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +271,7 @@
     <MESSAGE value="feat (backend): add regstation and code clenaing" />
     <MESSAGE value="fix (backend): adjust registration" />
     <MESSAGE value="feat (backend): add registration including json request" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (backend): add registration including json request" />
+    <MESSAGE value="feat (backend): add PersonalInfo logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (backend): add PersonalInfo logic" />
   </component>
 </project>
