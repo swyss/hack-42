@@ -6,6 +6,7 @@ import Patrners from './pages/Partners';
 import AdmDashboard from './pages/AdmDashboard';
 import Coach from './pages/Coach';
 import Dashboard from './pages/Dashboard';
+import Request from './pages/Request';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/partners' element={<Patrners />} />
         <Route path='/coach' element={<Coach />} />
+        <Route path='/request' element={<Request />} />
       </Routes>
     </BrowserRouter>
   )
