@@ -9,24 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AppAPI/Service/User/AuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppAPI/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="06c3a484-2e01-4ad4-89a1-24cdc27c0141" name="Changes" comment="fix (backend): add jwt return function">
+      <change afterPath="$PROJECT_DIR$/AppAPI/Controler/Helper/ComboBoxDataController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppAPI/Model/Helper/EnglishTestComboBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppAPI/AppAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/AppAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/Service/User/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/Service/User/IAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/AppAPI.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/ref/AppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/Debug/net8.0/refint/AppAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/AppAPI/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +83,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Docker.AppAPI/Dockerfile">
+  <component name="RunManager" selected=".NET Launch Settings Profile.AppAPI: http">
     <configuration name="AppAPI: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AppAPI/AppAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -181,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710983725424</updated>
       <workItem from="1710983726836" duration="26204000" />
-      <workItem from="1711024139107" duration="3763000" />
+      <workItem from="1711024139107" duration="4377000" />
     </task>
     <task id="LOCAL-00001" summary="feat (backend): add new project">
       <option name="closed" value="true" />
@@ -287,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711015907366</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix (backend): add jwt return function">
+      <option name="closed" value="true" />
+      <created>1711036632119</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711036632119</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +304,8 @@
     <MESSAGE value="feat (backend): add PersonalInfo logic" />
     <MESSAGE value="feat (bacend): authentification routs" />
     <MESSAGE value="config (backend): update files" />
-    <option name="LAST_COMMIT_MESSAGE" value="config (backend): update files" />
+    <MESSAGE value="fix (backend): add jwt return function" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix (backend): add jwt return function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
