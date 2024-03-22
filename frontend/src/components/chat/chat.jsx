@@ -15,14 +15,13 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "../ui/input";
 
 export default function Chat({ chat }) {
-  const isAdmin = false;
+  const isAdmin = true;
   const ref = useRef(null);
   const [MessageValue, setMessageValue] = useState("");
+  const messagesEndRef = useRef(null);
   const [Chat, setChat] = useState(chat);
   const jumpToBottom = () => {
-    if (ref.current) {
-      anchor.click();
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const handleSendMessage = () => {
     setTimeout(() => {
@@ -42,6 +41,13 @@ export default function Chat({ chat }) {
       setChat([...Chat, newChatItem]);
     }, 500);
   };
+  useEffect(() => {
+    console.log(messagesEndRef);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messagesEndRef]);
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chat]);
   const handleChange = (event) => {
     setMessageValue(event.target.value); // Update the state with the new value from the input
   };
@@ -60,28 +66,27 @@ export default function Chat({ chat }) {
           <CardContent className="p-0">
             <ScrollArea
               id="scrollArea"
-              className="w-full flex flex-col-reverse p-0"
+              className="w-full flex p-0"
               style={{ maxHeight: "300px", overflowY: "auto" }}
             >
-              <div
-                className="p-4 flex flex-col gap-2"
-                key={new Date().getTime()}
-              >
-                {Chat.map((mess) => (
+              <div className="p-4 flex flex-col gap-2">
+                {Chat.map((mess, index) => (
                   <div className="gap-2 flex">
                     <ChatMessage
                       message={mess.message}
                       time={mess.time}
                       sentAdmin={mess.isAdmin}
                       isAdmin={isAdmin}
+                      key={index}
                     />
                   </div>
                 ))}
-                <a
-                  id="scrollAreaAnchor"
-                  href="#scrollArea"
-                  style={{ display: "none" }}
-                  ref={ref}
+                <div
+                  className="flex w-full"
+                  key={new Date().getTime()}
+                  ref={(el) => {
+                    messagesEndRef.current = el;
+                  }}
                 />
               </div>
             </ScrollArea>
