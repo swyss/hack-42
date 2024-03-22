@@ -20,10 +20,6 @@ li {
   padding: 0; /* Removes the default padding */
 }
 
-.debug {
-  border: 1px solid red;
-}
-
 .fullHeightDiv {
   height: 100vh;
 }

@@ -52,7 +52,6 @@ export default function CreateStartup() {
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-1xl font-bold">Step {currentStep} of 5</h2>
           {renderForm()}
-          <pre>{JSON.stringify(formData, null, 2)}</pre>
         </div>
       </div>
     </div>
