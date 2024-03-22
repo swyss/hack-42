@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Application} from "@/components/ui/applicationtable"
+import { Application } from "@/components/ui/applicationtable";
 import {
   Command,
   CommandEmpty,
@@ -93,7 +93,6 @@ const StartupOverview = () => {
   );
 };
 
-
 const Dashboard = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("current");
@@ -127,11 +126,15 @@ const Dashboard = () => {
     );
   };
 
-  const views = [<StartupOverview />, <Application />, <Coach />,<RequestAdm />, <Partners />];
-
   const [viewIndex, setViewIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const views = [
+    <StartupOverview />,
+    <Application />,
+    <RequestAdm />,
+    <Coach />,
+    <Partners />,
+  ];
   return (
     <div className="section__padding fullHeightDiv debug">
       <div>
